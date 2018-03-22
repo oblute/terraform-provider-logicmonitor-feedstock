@@ -1,10 +1,10 @@
 {% set provider= "LogicMonitor" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
 
-{% set sha256 = "d4e139c8b27ddb722e8d932eea315fc8f5394dc84c9f3f7b7338eb074e0573c6" %}
+{% set sha256 = "b146a6bc6b337a890141eae433fe7e09fbc724e562a25d1d88f21cc486dfdd90" %}
 {% set sha256_win32 = "1992dc84457407163d826b7e0ae943ce626b1c158a0275753b7622e403f1a6e7" %}
 {% set sha256_win64 = "0aac05abd4a5feff626a61a8518f46a5342bcae72319855918bfa65f1d627946" %}
 
