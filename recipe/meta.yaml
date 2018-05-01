@@ -1,12 +1,11 @@
-{% set provider= "LogicMonitor" %}
+{% set provider = "LogicMonitor" %}
 {% set version = "1.2.0" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
 
 {% set sha256 = "96ab9fca4af13534382c7b4ad2fe3bfe209de3c253db752f0252a7f12b606209" %}
-{% set sha256_win32 = "a18b0f1d41de686e08cfc9e590dc9a81b1d80c9c083b0cb3c40f3219c545a8c0" %}
-{% set sha256_win64 = "b5e4b9a54a9bf1e24357eb8fc1b320aac03642c09765ce0d74dfb37312320e5b" %}
+{% set sha256_win64 = "df647ee6566b5f8fcdd4c48321ba94cc4344c3067695938c7e151831d5cad6dd" %}
 
 package:
   name: {{ name|lower }}
@@ -17,10 +16,8 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz  # [not win]
   sha256: {{ sha256 }}  # [not win]
 
-  url: https://releases.hashicorp.com/{{ name }}/{{ version }}/{{ name }}_{{ version }}_windows_386.zip  # [win32]
   url: https://releases.hashicorp.com/{{ name }}/{{ version }}/{{ name }}_{{ version }}_windows_amd64.zip  # [win64]
   fn: {{ name }}-{{ version }}.zip  # [win]
-  sha256: {{ sha256_win32 }}  # [win32]
   sha256: {{ sha256_win64 }}  # [win64]
 
 build:
@@ -46,7 +43,7 @@ about:
   license: MPL 2.0
   summary: The Terraform {{ provider }} provider
   doc_url: https://www.terraform.io/docs/providers/{{ provider|lower }}/index.html
-  dev_url: https://https://github.com/terraform-providers/{{ name }}
+  dev_url: https://github.com/terraform-providers/{{ name }}
 
 extra:
   recipe-maintainers:
