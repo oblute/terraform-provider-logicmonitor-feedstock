@@ -29,7 +29,6 @@ build:
 requirements:
   build:
     - {{ compiler('go') }} >=1.11.3
-    - toolchain  # [not win]
   run:
     - terraform >=0.10  # [unix]
     - terraform >=0.11.11  # [win]
